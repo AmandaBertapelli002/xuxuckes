@@ -1,0 +1,242 @@
+/* ==========================
+   xuxuckes - styles.css
+   Refinado para: Elegância + Criatividade
+   ========================== */
+
+/* Variáveis */
+:root {
+    --cor-primaria: #053128;   /* verde profundo */
+    --cor-secundaria: #d1d4c3; /* bege acinzentado */
+    --cor-destaque: #66081A;   /* vinho intenso */
+    --cor-texto: #1a1a1a;
+    --cor-texto-claro: #ffffff;
+  
+    --fonte-base: 'Georgia', serif;
+    --fonte-titulo: 'Georgia', serif;
+  }
+  
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--fonte-base);
+    line-height: 1.7;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+  }
+  
+  /* Header */
+  header {
+    background: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .brand a {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    letter-spacing: 2px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  header nav a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: var(--cor-destaque);
+  }
+  
+  /* Hero */
+  #hero {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--cor-primaria) 60%, var(--cor-destaque) 100%);
+    color: var(--cor-texto-claro);
+    position: relative;
+  }
+  
+  /* Área reservada para logo/tagline/selo */
+  #hero::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 120px;
+    height: 120px;
+    background: url("assets/img/selo-cibele.png") no-repeat center/contain;
+    opacity: 0.6;
+  }
+  
+  #hero h1 {
+    font-size: 2.8rem;
+    font-family: var(--fonte-titulo);
+    margin-bottom: 1rem;
+  }
+  
+  #hero p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+  }
+  
+  #hero .cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  #hero .cta-group a {
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Botão principal */
+  #hero .cta-group a:first-child {
+    background: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+  }
+  
+  #hero .cta-group a:first-child:hover {
+    background: #8c0c29;
+    transform: scale(1.05);
+  }
+  
+  /* Botão secundário */
+  #hero .cta-group a:last-child {
+    background: transparent;
+    border: 2px solid var(--cor-texto-claro);
+    color: var(--cor-texto-claro);
+  }
+  
+  #hero .cta-group a:last-child:hover {
+    background: var(--cor-texto-claro);
+    color: var(--cor-primaria);
+  }
+  
+  /* Seções */
+  section {
+    padding: 4rem 2rem;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+  }
+  
+  section p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+  
+  /* Cards (serviços e portfólio) */
+  section article {
+    background: #fff;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  section article:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+  }
+  
+  /* Formulário */
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--cor-primaria);
+  }
+  
+  form label {
+    font-weight: 600;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 0.9rem;
+    margin: 0.8rem 0;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  form button:hover {
+    background: var(--cor-destaque);
+    transform: translateY(-2px);
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  footer nav a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+  }
+  
+  footer nav a:hover {
+    color: var(--cor-destaque);
+  }
+  
