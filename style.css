@@ -26,7 +26,13 @@
     font-family: var(--fonte-base);
     line-height: 1.7;
     background-color: var(--cor-secundaria);
+    background-image: url('flores.png'); /* ajuste o caminho */
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover; /* cobre toda a tela */
+    background-attachment: fixed; /* fica fixo ao rolar */
     color: var(--cor-texto);
+
   }
   
   /* Header */
@@ -240,3 +246,125 @@
     color: var(--cor-destaque);
   }
   
+
+  /* ==========================
+   Seções do site xuxuckes
+   Estilo refinado com #66081A
+   ========================== */
+
+/* Geral das sections */
+section {
+    padding: 4rem 2rem;
+    background-color: rgba(255, 255, 255, 0.7); /* levemente translúcido */
+    border-top: 5px solid #66081A;
+    position: relative; /* para manter conteúdo acima do body */
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  color: #66081A; /* títulos em vinho intenso */
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #66081A;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Artigos / Cards */
+section article {
+  background: #fff;
+  border: 2px solid #66081A;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+section article:hover {
+  box-shadow: 0 8px 20px rgba(102, 8, 26, 0.2);
+  transform: translateY(-4px);
+  border-color: #8c0c29;
+}
+
+/* Links dentro das sections */
+section a {
+  color: #66081A;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+section a:hover {
+  color: #8c0c29;
+  text-decoration: underline;
+}
+
+/* Listas */
+section ul {
+  list-style: disc inside;
+  max-width: 700px;
+  margin: 1rem auto;
+  padding-left: 1rem;
+}
+
+section ul li {
+  margin-bottom: 0.5rem;
+  color: #66081A;
+  font-weight: 500;
+}
+
+/* Depoimentos */
+section#depoimentos figure {
+  background: #fff0f2;
+  border-left: 5px solid #66081A;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 700px;
+}
+
+section#depoimentos blockquote {
+  font-style: italic;
+  color: #66081A;
+}
+
+section#depoimentos figcaption {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #053128; /* contraste */
+}
+
+/* Blog */
+section#blog article {
+  border-left: 4px solid #66081A;
+}
+
+section#blog time {
+  color: #66081A;
+  font-weight: 600;
+}
+
+/* Contato */
+section#contato form {
+  border: 2px solid #66081A;
+}
+
+section#contato button {
+  background-color: #66081A;
+}
+
+section#contato button:hover {
+  background-color: #8c0c29;
+  transform: translateY(-2px);
+}
